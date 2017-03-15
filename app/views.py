@@ -130,13 +130,13 @@ def timeinfo():
 @app.route('/profile/<userid>', methods=['GET', 'POST'])
 @login_required
 def profileView(userid):
-    view = db.session.query(UserProfile).filter_by(id=id)
+    view = db.session.query(UserProfile).filter_by(userid=userid)
     #if not user:
     #   flash('User not found', 'danger')
     #else
     if request.method == 'POST':
         return jsonify(
-            'userid'= user.userid, 
+            'userid'= view.userid, 
             'username'= view.username, 
             'age'= view.age, 
             'gender'= view.gender, 
