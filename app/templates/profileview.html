@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<body>
+<div id=pi>
+<img src="{{user.image}}"></img>	
+
+{{ form.firstname }} {{ form.lastname }} <br>
+
+Profile Created On: {{ form.tday }}<br><br>
+
+Username: {{ form.username }}<br>
+User ID:{{ form.id }}<br>
+Gender: {{ form.gender }}<br>
+Age:{{ form.age }}<br><br>
+
+{{ form.biography }}
+
+</div>
+</body>
+
+{% endblock %}

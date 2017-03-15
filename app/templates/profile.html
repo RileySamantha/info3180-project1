@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+	
+<body>
+<div id=pi>
+<img src="{{user.profpic}}"></img>	
+<form action="{{ url_for('profile') }}" method="post">
+{{ form.firstname }} {{ form.lastname }} <br>
+
+Profile Created On: {{ form.tday }}<br><br>
+
+Username: {{ form.username }}<br>
+User ID:{{ form.id }}<br>
+Gender: {{ form.gender }}<br>
+Age:{{ form.age }}<br><br>
+
+{{ form.biography }}
+<button type="submit" name="submit">Create</button>
+</form>
+</div>
+</body>
+
+{% endblock %}
